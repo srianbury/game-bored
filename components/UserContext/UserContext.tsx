@@ -16,9 +16,11 @@ interface UserContextInterface {
   signOut: () => void;
 }
 
-type UserContextType = UserContextInterface | null;
-
-const UserContext = createContext<UserContextType>(null);
+const UserContext = createContext<UserContextInterface>({
+  user: null,
+  signIn: () => {},
+  signOut: () => {},
+});
 
 const UserContextProvider = ({ children }: UserContextProviderProps) => {
   const [user, setUser] = useState<UserType>(null);
