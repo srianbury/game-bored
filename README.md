@@ -1,3 +1,19 @@
+TypeScript Notes:
+You can explicitly describe this object’s shape using an interface declaration:
+
+```
+interface User {
+  name: string;
+  id: number;
+}
+```
+
+With TypeScript, you can create complex types by combining simple ones. There are two popular ways to do so: with unions, and with generics.
+
+```
+type MyBool = true | false;
+```
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
